@@ -1,0 +1,72 @@
+﻿@model dynamic
+
+<br/>
+<div>Complete your details to get a quote.</div>
+<br />
+<br/>
+
+<script language="javascript" type="text/javascript">
+    function CalculateLifeQuote() {
+
+//        var customerRiskJson = "{customerRisk: {DateTime: '17/02/1981',Gender: 0,PostCode: 'PE86PR',Smoker: false,HoursOfExercisePerWeek: '0',HaveChildren: 0}}";
+
+//        var customerRiskJson = "{'DateOfBirth': '0001-01-01T00:00:00', 'Gender': 0, 'Postcode': 'PE86PR', 'Smoker': false, 'HoursOfExercisePerWeek': 0,'HaveChildren': false}";
+
+        var customerRiskJson = {
+            "DateOfBirth": "17/02/1981",
+            "Gender": 0,
+            "Postcode": "PE86PR",
+            "Smoker": false,
+            "HoursOfExercisePerWeek": 0,
+            "HaveChildren": false
+        };
+
+
+        $.ajax({
+            url: "/LifeCalculator/CalculateLifeQuote",
+            data: JSON.stringify({ customerRisk: customerRiskJson }),
+            type: "POST",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (data) {
+                document.getElementById("Price").innerText = data.Price.toString();
+            }
+        });
+    }
+
+</script>
+
+<div>
+
+
+
+    <label for="DateOfBirth">Date of Birth:</label>
+    @Html.TextBox("DateOfBirth")
+    <br/>
+    <span>Gender:</span>
+    <label for="Male">Male</label>
+    @Html.RadioButton("Male", "1")
+
+    <label for="Female">Female:</label>
+    @Html.RadioButton("Female", "0")
+    <br />
+    <label for="PostCode">Post code:</label>
+    @Html.TextBox("PostCode")
+    <br />
+    <label for="Smoker">Do you smoke?</label>
+    @Html.CheckBox("Smoker")
+    <br />
+@*    <label for="DateOfBirth">Date of Birth</label>*@
+@*    @Html.DropDownList("HoursOfExcercise", )*@
+    <br />
+    <label for="HaveChildren">Do you have children?</label>
+    @Html.CheckBox("HaveChildren")
+    <br/>
+    <input type="button" value="Get Quote" onclick="CalculateLifeQuote();"/>
+
+    <div id="Quotation">
+        <span>Price: </span><span id="Price" />
+    </div>
+
+</div>
+

@@ -1,0 +1,14 @@
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\obj\Debug\LifeCalculatorTests.csprojResolveAssemblyReference.cache
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\LifeCalculatorTests.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\LifeCalculatorTests.pdb
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\CookiesFinanceSolutions.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\nunit.framework.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\CookiesFinanceSolutions.pdb
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\nunit.framework.xml
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\obj\Debug\LifeCalculatorTests.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\obj\Debug\LifeCalculatorTests.pdb
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\LifeCalculatorTests.dll.config
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\Moq.Contrib.dll
+C:\Users\david_000\Documents\Visual Studio 2015\Projects\WebApplication1\LifeCalculatorTests\bin\Debug\Moq.dll
