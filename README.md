@@ -1,8 +1,7 @@
 # LifeInsuranceCalculator
 
 I've written my version of the Life Insurance Calculator, with accompanying tests.
-The Address finder is simply knocked together and not "production ready" - I'd like to re-write this using TDD and throw away this version.
-There is also no Proxy set for the call to postcodes.io, so if you are behind the proxy, this will need to be set.
+There is no Proxy set for the call to postcodes.io, so if you are behind the proxy, this will need to be set.
 
 I've not writen the console application yet, but if you look on the physical folder where you have downloaded the solution to, I have started to put a website together that consumes this.
 I've not referenced this in the solution as this is very much a work in progress and contains quite a bit of experimentation.
