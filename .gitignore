@@ -277,3 +277,10 @@ Temporary Items
 
 # Build artifacts
 build-artifacts/
+/.vs
+/LifeCalculatorTests/obj
+/LifeCalculatorTests/bin
+/LifeInsuranceCalculator/obj
+/LifeInsuranceCalculator/bin
+/PostCodes.IO.Wrapper/obj
+/PostCodes.IO.Wrapper/bin
