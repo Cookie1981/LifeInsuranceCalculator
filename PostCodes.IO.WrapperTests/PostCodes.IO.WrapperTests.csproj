@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7708109-0EF2-4693-B5B4-E721B526247C}</ProjectGuid>
+    <ProjectGuid>{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LifeCalculatorTests</RootNamespace>
-    <AssemblyName>LifeCalculatorTests</AssemblyName>
+    <RootNamespace>PostCodes.IO.WrapperTests</RootNamespace>
+    <AssemblyName>PostCodes.IO.WrapperTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,14 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\packages\Moq.Contrib.0.3\lib\Moq.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Moq.Contrib, Version=0.1.3802.36788, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\packages\Moq.Contrib.0.3\lib\Moq.Contrib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\nunit.framework.dll</HintPath>
@@ -58,23 +50,17 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="CalculatorTests.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RiskBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LifeInsuranceCalculator\LifeInsurance.csproj">
-      <Project>{199dac3e-abaf-4fcd-aecb-9f28ede5f643}</Project>
-      <Name>LifeInsurance</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PostCodes.IO.Wrapper\PostCodes.IO.Wrapper.csproj">
-      <Project>{75C871CE-A55D-466F-9F90-A1E140A65961}</Project>
+      <Project>{75c871ce-a55d-466f-9f90-a1e140a65961}</Project>
       <Name>PostCodes.IO.Wrapper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

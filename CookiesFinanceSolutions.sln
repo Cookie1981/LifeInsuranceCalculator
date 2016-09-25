@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeInsurance", "LifeInsura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostCodes.IO.Wrapper", "PostCodes.IO.Wrapper\PostCodes.IO.Wrapper.csproj", "{75C871CE-A55D-466F-9F90-A1E140A65961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostCodes.IO.WrapperTests", "PostCodes.IO.WrapperTests\PostCodes.IO.WrapperTests.csproj", "{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{75C871CE-A55D-466F-9F90-A1E140A65961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C871CE-A55D-466F-9F90-A1E140A65961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C871CE-A55D-466F-9F90-A1E140A65961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D40D35-A3A3-486F-8DAA-AA3DE66A11AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

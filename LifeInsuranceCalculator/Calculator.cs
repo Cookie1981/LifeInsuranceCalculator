@@ -7,7 +7,7 @@ namespace LifeInsurance
 {
     public class Calculator
     {
-        private readonly IAddressFinder _addressFinder;
+        private readonly ILocationFinder _locationFinder;
         private Dictionary<BasePrice, decimal> _basePremiums;
         private Dictionary<ExcerciseBracket, decimal> _excercisePremiums;
         private Dictionary<string, decimal> _locationPremiums;
@@ -19,9 +19,9 @@ namespace LifeInsurance
         private const int PREMIUM_FOR_NON_PARENTS = 0;
         private const int PREMIUM_FOR_NON_SMOKERS = 0;
 
-        public Calculator(IAddressFinder addressFinder)
+        public Calculator(ILocationFinder locationFinder)
         {
-            _addressFinder = addressFinder;
+            _locationFinder = locationFinder;
 
             InitialiseeBasePriceLookup();
             InitialiseExcercisePremiumLookup();
@@ -131,13 +131,13 @@ namespace LifeInsurance
 
         private decimal GetRegionalHealthIndex(string postcode)
         {
-            if (_addressFinder == null)
+            if (_locationFinder == null)
                 throw new ArgumentNullException("_addressFinder");
 
-            var address = new Address("other");
+            var address = new LocationDetails("other");
             try
             {
-                address = _addressFinder.LookupAddressByPostcode(postcode);
+                address = _locationFinder.LookupAddressByPostcode(postcode);
             }
             catch
             {

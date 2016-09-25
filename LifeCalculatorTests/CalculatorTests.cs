@@ -10,13 +10,13 @@ namespace LifeCalculatorTests
     public class CalculatorTests
     {
         private Calculator _calculator;
-        private Address _default_address = new Address("England");
-        private Mock<IAddressFinder> _fakeAddressFinder = new Mock<IAddressFinder>();
+        private LocationDetails _defaultLocationDetails = new LocationDetails("England");
+        private Mock<ILocationFinder> _fakeAddressFinder = new Mock<ILocationFinder>();
 
         [SetUp]
         public void RunBeforeEveryTest()
         {
-            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(_default_address);
+            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(_defaultLocationDetails);
             _calculator = new Calculator(_fakeAddressFinder.Object);
         }
 
@@ -118,8 +118,9 @@ namespace LifeCalculatorTests
         {
             var customerRisk = new RiskBuilder().BuildRisk();
 
-            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(new Address(location));
+            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(new LocationDetails(location));
             _calculator = new Calculator(_fakeAddressFinder.Object);
+//            _calculator = new Calculator(new LocationFinder());
 
             var quote = _calculator.CalculateLifeQuote(customerRisk);
 
@@ -134,7 +135,7 @@ namespace LifeCalculatorTests
                 .SetHoursOfExcercise(9)
                 .BuildRisk();
 
-            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(new Address("Wales"));
+            _fakeAddressFinder.Setup(x => x.LookupAddressByPostcode(It.IsAny<string>())).Returns(new LocationDetails("Wales"));
             _calculator = new Calculator(_fakeAddressFinder.Object);
 
             var quote = _calculator.CalculateLifeQuote(customerRisk);
